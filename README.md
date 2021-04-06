@@ -1,4 +1,4 @@
-# schoo_imformation
+# school_imformation
 
 A new Flutter application.
 
