@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:school_imformation/utility/constants.dart';
 
 class TimeTable extends StatelessWidget {
   const TimeTable({
@@ -19,23 +20,14 @@ class TimeTable extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 30),
           child: Text(
             "오늘의 시간표",
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-            ),
+            style: todayTimeTableTextStyle,
           ),
         ),
         Container(
           padding: const EdgeInsets.only(left: 10),
           width: double.infinity,
           height: 200,
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: Colors.black,
-              width: 2.5,
-            ),
-            borderRadius: BorderRadius.circular(10),
-          ),
+          decoration: timeTableViewContainerDecoration(),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,

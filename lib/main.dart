@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:school_imformation/screens/mealTimeTable.dart';
 import 'package:school_imformation/screens/selfDiagnosisScreen.dart';
 import 'package:school_imformation/screens/timeTableScreen.dart';
 import 'package:school_imformation/service/service.dart';
@@ -59,6 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               SelfDiagnosis(),
               TimeTable(isLoading: isLoading, subject: subject),
+              MealTimeTable(),
             ],
           ),
         ),
