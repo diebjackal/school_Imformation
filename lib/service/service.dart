@@ -5,6 +5,7 @@ import 'package:http/http.dart' as http;
 
 const List<String> currenciesList = ["월", "화", "수", "목", "금"];
 List<String> subject = [];
+List maxPeriod = [];
 String day = formatDate(DateTime.now(), [yyyy, mm, dd]);
 
 class SchoolData {
@@ -16,8 +17,8 @@ class SchoolData {
     if (response.statusCode == 200) {
       print("success");
       final decodedData = jsonDecode(utf8.decode(response.bodyBytes));
-
-      for (int i = 0; i < 7; i++) {
+      maxPeriod = decodedData["result"]["timetable"];
+      for (int i = 0; i < maxPeriod.length; i++) {
         subject.add(decodedData["result"]["timetable"][i]["subject"]);
       }
     } else {

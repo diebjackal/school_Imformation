@@ -29,14 +29,12 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   List<String> subject;
-  bool isLoading = false;
 
   void getData() async {
     try {
       var data = await SchoolData().getSchoolData();
       setState(() {
         subject = data;
-        isLoading = true;
       });
     } catch (e) {
       print(e);
@@ -59,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: ListView(
             children: [
               SelfDiagnosis(),
-              TimeTable(isLoading: isLoading, subject: subject),
+              TimeTable(subject: subject),
               MealTimeTable(),
             ],
           ),

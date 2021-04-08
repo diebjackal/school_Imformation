@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 
 //text Style
-const todayTimeTableTextStyle = TextStyle(
+const todayTimeTableTitleTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
   fontSize: 20,
+);
+
+const todayTimeTableTextStyle = TextStyle(
+  fontSize: 15,
+  color: Colors.white,
 );
 
 const selfDiagnosisTextStyle = TextStyle(
@@ -15,10 +20,11 @@ const selfDiagnosisTextStyle = TextStyle(
 Decoration timeTableViewContainerDecoration() {
   return BoxDecoration(
     border: Border.all(
-      color: Colors.black,
-      width: 2.5,
+      color: Color(0xff7b563d),
+      width: 3.5,
     ),
     borderRadius: BorderRadius.circular(10),
+    color: Color(0xff416036),
   );
 }
 
