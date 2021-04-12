@@ -55,6 +55,16 @@ Decoration settingContainerDecoration() {
   );
 }
 
+RoundedRectangleBorder settingButtonShape() {
+  return RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(10),
+    side: BorderSide(
+      width: 2,
+      color: Colors.black,
+    ),
+  );
+}
+
 RoundedRectangleBorder selfDiagnosisButtonShape() {
   return RoundedRectangleBorder(
     side: BorderSide(
