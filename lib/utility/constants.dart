@@ -1,19 +1,28 @@
 import 'package:flutter/material.dart';
 
 //text Style
-const todayTimeTableTitleTextStyle = TextStyle(
+const HeadTitleTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
   fontSize: 20,
+);
+
+const dayTableTitleTextStyle = TextStyle(
+  fontWeight: FontWeight.bold,
 );
 
 const todayTimeTableTextStyle = TextStyle(
   fontSize: 15,
   color: Colors.white,
 );
-
-const selfDiagnosisTextStyle = TextStyle(
+const sundayTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
-  fontSize: 20,
+  fontSize: 45,
+  color: Colors.white,
+);
+
+const mealTimeTextStyle = TextStyle(
+  fontWeight: FontWeight.bold,
+  fontSize: 18,
 );
 
 //Decoration
@@ -25,6 +34,24 @@ Decoration timeTableViewContainerDecoration() {
     ),
     borderRadius: BorderRadius.circular(10),
     color: Color(0xff416036),
+  );
+}
+
+Decoration viewMealContainerDecoration() {
+  return BoxDecoration(
+    color: Colors.white,
+    borderRadius: BorderRadius.circular(15),
+    border: Border.all(color: Colors.black, width: 2),
+  );
+}
+
+Decoration settingContainerDecoration() {
+  return BoxDecoration(
+    border: Border.all(
+      color: Colors.black,
+      width: 2,
+    ),
+    borderRadius: BorderRadius.circular(10),
   );
 }
 

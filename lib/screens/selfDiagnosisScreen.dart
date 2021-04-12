@@ -17,11 +17,18 @@ class _SelfDiagnosisState extends State<SelfDiagnosis> {
       shape: selfDiagnosisButtonShape(),
       onPressed: () => launch(_selfDiagnosis),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          Padding(
-              padding: EdgeInsets.all(10),
-              child: FaIcon(FontAwesomeIcons.clipboardList, size: 25)),
-          Text("자가진단 하러 가기", style: selfDiagnosisTextStyle),
+          Row(
+            children: [
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: FaIcon(FontAwesomeIcons.clipboardList, size: 25),
+              ),
+              Text("자가진단 하러 가기", style: HeadTitleTextStyle),
+            ],
+          ),
+          Icon(Icons.arrow_forward),
         ],
       ),
     );
