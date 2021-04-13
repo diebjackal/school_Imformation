@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:school_imformation/service/service.dart';
+import 'package:school_imformation/service/timeTableServer.dart';
 import 'package:school_imformation/utility/constants.dart';
 
 class TimeTable extends StatelessWidget {

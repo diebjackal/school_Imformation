@@ -8,7 +8,7 @@ class ViewMeal extends StatelessWidget {
   const ViewMeal({Key? key, required this.index, required this.meal})
       : super(key: key);
 
-  final List<String> meal;
+  final List<dynamic> meal;
   final int index;
   @override
   Widget build(BuildContext context) {

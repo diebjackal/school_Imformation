@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:school_imformation/component/Header.dart';
 import 'package:school_imformation/screens/selfDiagnosisScreen.dart';
 import 'package:school_imformation/screens/timeTableScreen.dart';
-import 'package:school_imformation/service/service.dart';
+import 'package:school_imformation/service/timeTableServer.dart';
 
 import 'mealTimeTable.dart';
 
