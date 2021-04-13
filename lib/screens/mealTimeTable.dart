@@ -41,9 +41,9 @@ class _MealTimeTableState extends State<MealTimeTable> {
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: [
-              ViewMeal(index: 0, meal: breakFast),
-              ViewMeal(index: 1, meal: lunch),
-              ViewMeal(index: 2, meal: dinner),
+              ViewMeal(index: 0, meal: breakFast, cal: [breakFastCal]),
+              ViewMeal(index: 1, meal: lunch, cal: [lunchCal]),
+              ViewMeal(index: 2, meal: dinner, cal: [dinnerCal]),
             ],
           ),
         ),

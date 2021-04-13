@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:school_imformation/utility/constants.dart';
 
 List<String> _mealTime = ["아침", "점심", "저녁"];
-List<String> _Kcal = ["1000", "1230", "900"];
 
 class ViewMeal extends StatelessWidget {
-  const ViewMeal({Key? key, required this.index, required this.meal})
+  const ViewMeal(
+      {Key? key, required this.index, required this.meal, required this.cal})
       : super(key: key);
 
   final List<dynamic> meal;
+  final List<String> cal;
   final int index;
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,7 @@ class ViewMeal extends StatelessWidget {
                 "${_mealTime[index]}",
                 style: mealTimeTextStyle,
               ),
-              Text("${_Kcal[index]}Kcal"),
+              Text("${cal[0].toString()}"),
             ],
           ),
           Divider(color: Colors.black, thickness: 1.5),

@@ -2,9 +2,13 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-List<dynamic> breakFast = [];
-List<dynamic> lunch = [];
-List<dynamic> dinner = [];
+List<dynamic?> breakFast = [];
+List<dynamic?> lunch = [];
+List<dynamic?> dinner = [];
+
+String breakFastCal = "";
+String lunchCal = "";
+String dinnerCal = "";
 
 class MealData {
   Future getMealData() async {
@@ -14,9 +18,15 @@ class MealData {
     http.Response response = await http.get(requestURL);
     if (response.statusCode == 200) {
       final decodedData = jsonDecode(utf8.decode(response.bodyBytes));
+      //menu
       breakFast = decodedData['result'][0]['menu'];
       lunch = decodedData['result'][1]['menu'];
       dinner = decodedData['result'][2]['menu'];
+      //cal
+      breakFastCal = decodedData['result'][0]['cal'];
+      lunchCal = decodedData['result'][1]['cal'];
+      dinnerCal = decodedData['result'][2]['cal'];
+      print(breakFastCal);
     } else {
       print(response.statusCode);
     }
